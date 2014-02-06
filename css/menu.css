@@ -3,6 +3,10 @@
 	height:118px;
 	position: relative;
 	color:#FF3399;
+
+	-webkit-box-shadow: 0 3px 3px #3c3c40;
+    -moz-box-shadow: 0 3px 3px #3c3c40;
+    box-shadow: 0 3px 3px #3c3c40;
 }
 
 #nav,#nav ul {
@@ -32,8 +36,8 @@ a:link {color:#FF3399;}
 	position: relative;
 	color:#FF3399;
 	height: 118px;
-	background: -webkit-linear-gradient(#FF9900, white); /* For Safari */
-	background: -o-linear-gradient(#FF9900, white); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(#FF9900, white); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(#FF9900, white); /* Standard syntax (must be last) */
+	background: -webkit-linear-gradient(#FAEBD7, #FFE5B4); /* For Safari */
+	background: -o-linear-gradient(#FAEBD7, #FFE5B4); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#FAEBD7, #FFE5B4); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#FAEBD7, #FFE5B4); /* Standard syntax (must be last) */
 }
