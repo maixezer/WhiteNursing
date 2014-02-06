@@ -13,8 +13,25 @@
 	<!-- End of CSS code -->
 	<!-- ############### -->
 
-	<script src="jquery.js"></script>
+	<script src="javascript/jquery-1.10.1.min.js"></script>
 	<script type="text/javascript">
+
+		function reWindowsize(){
+			var windowWidth = $(window).width();
+  			//$(".body").html(windowWidth);//Just to see in real time what's the window with
+  			if (windowWidth < 1150) {
+    			$('.body').css('width', '1150px');
+  			}
+  			else {
+    			$('.body').css('width', windowWidth);
+   				//$('.body').css('left', 'auto');
+ 			}
+		}
+
+		$(window).ready(reWindowsize);
+
+		$(window).resize(reWindowsize);
+
 	</script>
 
     <!-- ###################### -->
@@ -27,21 +44,52 @@
 
 	<div style="text-align:right;padding:0 8px;margin:13px;font-size:small;
 font-family: cursive;">ศูนย์ดูแลผู้สูงอายุ white nursing home โทร. 02-543-8633 , 083-075-2855 </div>
-
 	<ul id="nav">
-		<li><a href='index.html'></a></li>
-		<li><a href='contact.html'>ติดต่อเรา</a></li>
-		<li><a href='gallery.html'>รูปภาพ</a></li>
-		<li><a href='activity.html'>กิจกรรม</a></li>
-		<li><a href='service.html'>บริการ</a></li>
-		<li><a>หน้าหลัก</a></li>
+		<li><a href='index.html' style="float:left ;width:118px">
+			<img src="pic/logo.jpg" ></img></a>
+		</li>
+		<div id="navbar">
+				<li><a href='contact.html'>ติดต่อเรา</a></li>
+				<li><a href='gallery.html'>รูปภาพ</a></li>
+				<li><a href='activity.html'>กิจกรรม</a></li>
+				<li><a href='service.html'>บริการ</a></li>
+				<li><a href='index.html'>หน้าหลัก</a></li>
+		</div>
 	</ul>
-
-	<div style="padding:0 25px;">สถานฟื้นฟูดูแลผู้สูงอายุ ผู้ป่วยพักฟื้น
-	อัมพฤก, อัมพาต, เจาะคอ, ดูดเสมหะ, ผู้ป่วยให้อาหารทางสายยาง, ผู้ป่วยหลังผ่าตัด, แผลกดทับ, ผู้ป่วยทำกายภาพบำบัด ผู้ป่วยโรคทางระบบประสาท โดยทีมแพทย์พยาบาลที่มีความรู้ และจิตใจที่ดี มีประสบการณ์ ทางด้านการดูแล มากกว่า 20 ปี เรายินดีที่จะทำหน้าที่แทนท่าน เพื่อความสุขของคนที่ท่านรัก เราใส่ใจทุกการดูแลของคนที่รักดุจญาติมิตร สถานที่พัก เราจัดให้เหมือนบ้านของท่าน สะอาดบรรยากาศเงียบสงบเป็นส่วนตัว เหมาะสำหรับพักฟื้น สภาพทางกายและจิตใจ
-
-	เดินทางสะดวก ใกล้โรงพยาบาลของรัฐ และเอกชน เช่น โรงพยาบาลนวมินทร์ 1, โรงพยาบาลนวมินทร์ 9, โรงพยาบาลเสรีรักษ์ โรงพยาบาลเกษมราษฎร์ ( สุขภิบาล 3 ), โรงพยาบาลรามคำแหง โรงพยาบาลสินแพทย์ โรงพยาบาลนพรัตน์
+	<div id="wrapper">
+		<div id="i_header"><h2>สถานฟื้นฟูดูแลผู้สูงอายุ ผู้ป่วยพักฟื้น </h2></div>
+		<hr>
+		<div id="top_wrapper">
+			<ul>
+				<li class="i_list">
+               		 อัมพฤก, อัมพาต, เจาะคอ, ดูดเสมหะ, ผู้ป่วยให้อาหารทางสายยาง, ผู้ป่วยหลังผ่าตัด, แผลกดทับ,
+					ผู้ป่วยทำกายภาพบำบัด ผู้ป่วยโรคทางระบบประสาท โดยทีมแพทย์พยาบาลที่มีความรู้ และจิตใจที่ดี
+					มีประสบการณ์ ทางด้านการดูแล มากกว่า 20 ปี เรายินดีที่จะทำหน้าที่แทนท่าน 
+					เพื่อความสุขของคนที่ท่านรัก เราใส่ใจทุกการดูแลของคนที่รักดุจญาติมิตร สถานที่พัก 
+					เราจัดให้เหมือนบ้านของท่าน สะอาดบรรยากาศเงียบสงบเป็นส่วนตัว เหมาะสำหรับพักฟื้น 
+					สภาพทางกายและจิตใจ
+				</li>
+			</ul>
+		</div>
+		<div id="middle_wrapper">
+			<strong><i>เดินทางสะดวก ใกล้โรงพยาบาลของรัฐ และเอกชน </i></strong>
+			<ul>
+				<li> โรงพยาบาลนวมินทร์ 1 </li>
+				<li>  โรงพยาบาลนวมินทร์ 9 </li>
+				<li> โรงพยาบาลเสรีรักษ์ </li>
+				<li> โรงพยาบาลเกษมราษฎร์ ( สุขภิบาล 3 )</li>
+				<li> โรงพยาบาลรามคำแหง</li>
+				<li> โรงพยาบาลสินแพทย์ </li>
+			    <li> โรงพยาบาลนพรัตน์ </li>
+			</ul>
+			<div id="facebook_wrapper">
+				<iframe src="https://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2FPeerapatResidents&amp;width&amp;height=590&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=true&amp;show_border=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:590px;" allowTransparency="true"></iframe>
+			</div>
+		</div>
 	</div>
+	<hr>
+	<div style="text-align:center;padding:0 8px;margin:13px;font-size:small;
+font-family: cursive;">Credit: Suwijak Chaipipat, Parinthorn Panya SKE10</div>
 
 </body>
 </html>

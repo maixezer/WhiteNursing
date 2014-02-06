@@ -13,8 +13,25 @@
 	<!-- End of CSS code -->
 	<!-- ############### -->
 
-	<script src="jquery.js"></script>
+	<script src="javascript/jquery-1.10.1.min.js"></script>
 	<script type="text/javascript">
+
+		function reWindowsize(){
+			var windowWidth = $(window).width();
+  			//$(".body").html(windowWidth);//Just to see in real time what's the window with
+  			if (windowWidth < 1150) {
+    			$('.body').css('width', '1150px');
+  			}
+  			else {
+    			$('.body').css('width', windowWidth);
+   				//$('.body').css('left', 'auto');
+ 			}
+		}
+
+		$(window).ready(reWindowsize);
+
+		$(window).resize(reWindowsize);
+
 	</script>
 
     <!-- ###################### -->
@@ -29,13 +46,21 @@
 font-family: cursive;">ศูนย์ดูแลผู้สูงอายุ white nursing home โทร. 02-543-8633 , 083-075-2855 </div>
 
 	<ul id="nav">
-		<li><a href='index.html'></a></li>
-		<li><a href='contact.html'>ติดต่อเรา</a></li>
-		<li><a >รูปภาพ</a></li>
-		<li><a href='activity.html'>กิจกรรม</a></li>
-		<li><a href='service.html'>บริการ</a></li>
-		<li><a href='index.html'>หน้าหลัก</a></li>
+		<li><a href='index.html' style="float:left ;width:118px">
+			<img src="pic/logo.jpg" ></img></a>
+		</li>
+		<div id="navbar">
+				<li><a href='contact.html'>ติดต่อเรา</a></li>
+				<li><a href='gallery.html'>รูปภาพ</a></li>
+				<li><a href='activity.html'>กิจกรรม</a></li>
+				<li><a href='service.html'>บริการ</a></li>
+				<li><a href='index.html'>หน้าหลัก</a></li>
+		</div>
 	</ul>
-
+	<div id="wrapper">
+	</div>
+	<hr>
+	<div style="text-align:center;padding:0 8px;margin:13px;font-size:small;
+	font-family: cursive;">Credit: Suwijak Chaipipat, Parinthorn Panya SKE10</div>
 </body>
 </html>
