@@ -1,43 +1,6 @@
-/* main menu styles */
-#nav {
-	height:118px;
-	position: relative;
-	color:#FF3399;
-
-	-webkit-box-shadow: 0 3px 3px #3c3c40;
-    -moz-box-shadow: 0 3px 3px #3c3c40;
-    box-shadow: 0 3px 3px #3c3c40;
-}
-
-#nav,#nav ul {
-	position: relative;
-	list-style:none;
-	padding:0px;
-	background-color:#FFDB58;
-	border:5px solid;
-}
-
-a:visited {color:#FF3399;}  /* visited link */
-a:link {color:#FF3399;}
-
-#nav li a {
-	position: relative;
-	background:no-repeat right top;
-	float:right;
-	font-size:16px;
-	font-weight:bold;
-	width:140px;
-	line-height:115px;
-	text-align: center;
-	text-decoration:none;
-}
-
-#navbar li:hover > a {
-	position: relative;
-	color:#FF3399;
-	height: 118px;
-	background: -webkit-linear-gradient(#FAEBD7, #FFE5B4); /* For Safari */
-	background: -o-linear-gradient(#FAEBD7, #FFE5B4); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(#FAEBD7, #FFE5B4); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(#FAEBD7, #FFE5B4); /* Standard syntax (must be last) */
+.header_navbar {
+	margin-right: 6%;
+	margin-left: 6%;
+	width: 1125px;
+	height: 380px;
 }
