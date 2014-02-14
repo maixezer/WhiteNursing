@@ -1,10 +1,8 @@
 .body {
 	margin: 6.5%;
-	width: 1500px;
-	max-width: 1500px;
 }
 
-.body , .wrapper-panel .panel-body , .wrapper-panel .panel-footer{
+.body , .wrapper-head-panel .panel-body , .wrapper-head-panel .panel-footer{
             width:1250px !important;
 }
 
@@ -23,13 +21,15 @@ span {
 	font-size: 20px;
 }
 
+strong {
+	text-decoration: underline;
+}
+
 #navbar-container {
 	margin-right: 3%;
 }
 
-.panel {
-	overflow-x: initial;
-	position: fixed;
+#head-panel{
 	display: block;
 	width: 100%;
 	max-width: 1250px;
@@ -57,3 +57,34 @@ span {
 	margin-top: 3%;
 	margin-left: 3%;
 }
+
+#under-panel{
+	height: auto;
+}
+
+#allcontent {
+	margin-top: 20px;
+	margin-left: 10px;
+	float: left;
+}
+
+#allcontent p:first-child , #allcontent p:nth-child(6) , #allcontent p:nth-child(10){
+	text-indent: 50px;
+}
+
+#index-thumbnail {
+	margin-top: 20px;
+	margin-right: 70px;
+	float:right;
+}
+
+#index-thumbnail img {
+	width: 400px;
+	height: 300px;
+}
+
+.thumbnail{
+	width: 400px;
+	height: auto;
+}
+
