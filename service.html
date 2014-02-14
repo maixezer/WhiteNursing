@@ -2,90 +2,70 @@
 <html>
 <head>
 
-	<!-- Set character set to utf-8 -->
 	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>White Nursing Home</title>
 
-	<link rel="stylesheet" href="css/menu.css" type="text/css" media="all">
+    <!-- Bootstrap -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
-	<link rel="stylesheet" href="css/body.css" type="text/css" media="all">
+    <!-- My CSS -->
+    <link rel="stylesheet" href="css/body.css" type="text/css" media="all">
 
-	<!-- ############### -->
-	<!-- End of CSS code -->
-	<!-- ############### -->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="bower_components/jquery/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
-	<script src="javascript/jquery-2.1.0.min.js"></script>
-	<script type="text/javascript">
 
-		function reWindowsize(){
-			var windowWidth = $(window).width();
-  			//$(".body").html(windowWidth);//Just to see in real time what's the window with
-  			if (windowWidth < 1150) {
-    			$('.body').css('width', '1150px');
-  			}
-  			else {
-    			$('.body').css('width', windowWidth);
-   				//$('.body').css('left', 'auto');
- 			}
-		}
-
-		$(window).ready(reWindowsize);
-
-		$(window).resize(reWindowsize);
-
-	</script>
-
-    <!-- ###################### -->
-    <!-- End of Javascript code -->
-    <!-- ###################### -->
-
-	<title> White Nursing Home </title>
 </head>
 <body class="body">
 
-	<div style="text-align:right;padding:0 8px;margin:13px;font-size:small;
-font-family: cursive;">ศูนย์ดูแลผู้สูงอายุ white nursing home โทร. 02-543-8633 , 083-075-2855 </div>
+	<div class="navbar navbar-default navbar-fixed-top " role="navigation">
+        <div class="navbar-header navbar-left">
+            <a class="navbar-brand" href="index.html">
+                <em>White Nursing Home</em>
+            </a>
+            <span class="navbar-brand">
+                Tel. 02-543-8633 , 083-075-2855 
+            </span>
+        </div>
 
-	<ul id="nav">
-		<li><a href='index.html' style="float:left ;width:118px">
-			<img src="pic/logo.jpg" ></img></a>
-		</li>
-		<div id="navbar">
-				<li><a href='contact.html'>ติดต่อเรา</a></li>
-				<li><a href='gallery.html'>รูปภาพ</a></li>
-				<li><a href='activity.html'>กิจกรรม</a></li>
-				<li><a href='service.html'>บริการ</a></li>
-				<li><a href='index.html'>หน้าหลัก</a></li>
-		</div>
-	</ul>
+        <div class="collapse navbar-collapse" id="navbar-container">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="service.html">Service</a></li>
+                <li><a href="activity.html">Activity</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
 
-	<div id='wrapper'style="padding:0 25px;">
-		<div id="i_header">
-			<h2> บริการ </h2></div>
-		<hr>
-		<div>
-		<ul>
-			<li>ผู้ป่วยผู้สูงอายุ จะได้รับการดูแลอย่างใกล้ชิด ตลอด 24 ชม.</li>
-			<li>
-				อาหารส่งเสริมด้านสุขภาพ มีให้ครบทั้ง 3 มื้อ พร้อมอาหารว่าง ถูกต้องตามหลักโภชนาการ อาหารที่ไม่ขัด
-				โรค ต่อผู้สูงอายุ และผู้ป่วย
-			</li>
-			<li>ด้านการส่งเสริม ฟื้นฟูสมรรถภาพทางกาย กายภาพบำบัดขั้นพื้นฐาน</li>
-			<li>มีทีมแพทย์ พยาบาลบุคคลากรวิชาชีพ ดูแล เอาใจใส่อย่างใกล้ชิด และพร้อมให้คำแนะนำด้านสุขภาพได้ทุกเมื่อ</li>
-			<li>ตรวจวัดความดันโลหิต ชีพจร การหายใจ อุณหภูมิร่างกาย และบันทึกรายงานตามอาการเช้าและเย็น</li>
-			<li>มีเครื่องนอน เครื่องนุ่งห่ม ให้ผู้ป่วยทุกคน</li>
-			<li><em>มีเครื่องอำนวยความสะดวกต่างๆ </em>
-				<ul>
-					<li>อินเตอร์เน็ต</li>
-					<li>โทรทัศน์ในห้องผู้ป่วย ( เคเบิลทีวี )</li>
-					<li>เครื่องปรับอากาศ </li>
-					<li>เครื่องทำน้ำร้อนน้ำเย็น</li>
-				</ul>
-			</li>
-		</ul>
-		</div>
-	</div>
-	<hr>
-	<div style="text-align:center;padding:0 8px;margin:13px;font-size:small;
-	font-family: cursive;">Credit: Suwijak Chaipipat, Parinthorn Panya SKE10</div>
+    <div class="wrapper-panel">
+        <div class="panel panel-default">
+            <div class="panel-body" id="panel-header">
+                   <img src="pic/logo.png">
+            </div>
+
+            <div class="panel-footer">
+                <ul class="nav nav-pills nav-justified">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active"><a href="service.html">Service</a></li>
+                    <li><a href="activity.html">Activity</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
 </body>
 </html>
