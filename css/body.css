@@ -3,17 +3,17 @@
 }
 
 .body , .wrapper-head-panel .panel-body , .wrapper-head-panel .panel-footer{
-            width:1250px !important;
+	width:1250px !important;
 }
 
 .wrapper-navbar .navbar .navbar-header {
-			width:1250px !important;
-			height: 0px;
+	width:1250px !important;
+	height: 0px;
 }
 
 em{
-	 font-family:Cursive; 
-	 font-size:30px;
+	font-family: Cursive; 
+	font-size:30px;
 }
 
 span {
@@ -74,7 +74,7 @@ strong {
 
 #index-thumbnail {
 	margin-top: 20px;
-	margin-right: 70px;
+	margin-right: 50px;
 	float:right;
 }
 
@@ -88,3 +88,6 @@ strong {
 	height: auto;
 }
 
+th {
+	width: 500px;
+}

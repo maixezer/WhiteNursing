@@ -1,60 +1,95 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
-	<meta charset="utf-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>White Nursing Home</title>
 
     <!-- Bootstrap -->
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- jQuery 2.1.0 -->
+    <script type="text/javascript" src="bower_components/jquery/jquery-2.1.0.min.js"></script>
 
     <!-- My CSS -->
     <link rel="stylesheet" href="css/body.css" type="text/css" media="all">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <script src="bower_components/jquery/jquery.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Slimbox 2.05 -->
+    <script type="text/javascript" src="slimbox-2.05/js/slimbox2.js"></script>
+    <link rel="stylesheet" href="slimbox-2.05/css/slimbox2.css" type="text/css" media="screen" />
 
+    <script type="text/javascript">
+    $(document).ready(function(){
+    
+    /*
+        ------------------------------------------------------
+        Wrap '<a>...</a>' HTML tags around the '<img>' element
+        ------------------------------------------------------
+    */
+        $('th img').each(function(){
+            $(this).wrap('<a href="'  + $(this).attr('src') +
+                          '" title="' + this.alt +
+                          '" rel=lightbox_show></a>'); 
+        }); 
+        
+    /*
+        ---------------------------
+        Call the slimbox() function
+        ---------------------------
+    */
+        $("a[rel^='lightbox']").slimbox({/* Put custom options here */}, 
+            function(el) {
+                return [el.href, el.title];
+            },
+ 
+            function(el) { 
+                return (this == el) || ((this.rel.length > 8) && (this.rel == el.rel)); 
+            }
+        ); 
+    })  
+    </script>
+
+    <style type="text/css">
+
+    tr {
+        width: 400px;
+    }
+
+    #index-thumbnail {
+        margin-right: 10px;
+        margin-top: 0px;
+    }
+
+    .panel-body {
+        padding: 0px;
+    }
+
+    #allcontent {
+        margin-left: 0px;
+    }
+
+    </style>
 
 </head>
-<body class="body">
+<body class='body'>
 
-	<div class="navbar navbar-default navbar-fixed-top " role="navigation">
-        <div class="navbar-header navbar-left">
-            <a class="navbar-brand" href="index.html">
-                <em>White Nursing Home</em>
-            </a>
-            <span class="navbar-brand">
-                Tel. 02-543-8633 , 083-075-2855 
-            </span>
-        </div>
-
-        <div class="collapse navbar-collapse" id="navbar-container">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="service.html">Service</a></li>
-                <li><a href="activity.html">Activity</a></li>
-                <li class="active"><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="wrapper-panel">
-        <div class="panel panel-default">
-            <div class="panel-body" id="panel-header">
-                   <img src="pic/logo.png">
+    <div class="wrapper-navbar">
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="navbar-header navbar-left">
+                <a class="navbar-brand" href="index.html">
+                    <em>White Nursing Home</em>
+                </a>
+                <span class="navbar-brand">
+                    Tel. 02-543-8633 , 083-075-2855 
+                </span>
             </div>
 
-            <div class="panel-footer">
-                 <ul class="nav nav-pills">
+            <div class="collapse navbar-collapse" id="navbar-container">
+                <ul class="nav navbar-nav navbar-right">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="service.html">Service</a></li>
                     <li><a href="activity.html">Activity</a></li>
@@ -65,34 +100,144 @@
         </div>
     </div>
 
+    <div class="wrapper-head-panel">
+        <div class="panel panel-default" id="head-panel">
+            <div class="panel-body" id="panel-header">
+                   <img src="pic/logo.png">
+            </div>
+
+            <div class="panel-footer">
+                <ul class="nav nav-pills">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="service.html">Service</a></li>
+                    <li><a href="activity.html">Activity</a></li>
+                    <li class="active"><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
     <div class="wrapper-under-panel">
         <div class="panel panel-primary" id="under-panel">
             <div class="panel-heading"><em>Gallery</em></div>
                 <div class="panel-body">
-
                     <div id="allcontent" >
                     
                        <table width="1250" border="0">
                             <tbody>
                                 <tr>
-                                    <th width="416" scope="col" ><img src="pic/IMG_1306.jpg" width="350" height ="250"></th>
-                                    <th width="416" scope="col" ><img src="pic/IMG_1318.jpg" width="350" height ="250"></th>
-                                    <th width="416" scope="col" ><img src="pic/IMG_1328.jpg" width="350" height ="250"></th>
+                                    <th width="416" scope="col" >
+                                        <div class="thumbnail" id="index-thumbnail">
+                                            <img src="pic/IMG_1318.jpg" width="350" height ="250">
+                                        <div>
+                                    </th>
+
+                                    <th width="416" scope="col" >
+                                        <div class="thumbnail" id="index-thumbnail">
+                                            <img src="pic/IMG_1288.jpg" width="350" height ="250">
+                                        <div>
+                                    </th>
+
+                                    <th width="416" scope="col" >
+                                        <div class="thumbnail" id="index-thumbnail">
+                                            <img src="pic/IMG_1295.jpg" width="350" height ="250">
+                                        <div>
+                                    </th>
                                 </tr>
+
+                                <tr>
+                                    <th width="416" scope="col" >
+                                        <div class="thumbnail" id="index-thumbnail">
+                                            <img src="pic/IMG_1279.jpg" width="350" height ="250">
+                                        <div>
+                                    </th>
+
+                                    <th width="416" scope="col" >
+                                        <div class="thumbnail" id="index-thumbnail">
+                                            <img src="pic/IMG_1313.jpg" width="350" height ="250">
+                                        <div>
+                                    </th>
+
+                                    <th width="416" scope="col" >
+                                        <div class="thumbnail" id="index-thumbnail">
+                                            <img src="pic/IMG_1306.jpg" width="350" height ="250">
+                                        <div>
+                                    </th>
+                                </tr>
+
+                                <tr>
+                                    <th width="416" scope="col" >
+                                        <div class="thumbnail" id="index-thumbnail">
+                                            <img src="pic/IMG_1297.jpg" width="350" height ="250">
+                                        <div>
+                                    </th>
+
+                                    <th width="416" scope="col" >
+                                        <div class="thumbnail" id="index-thumbnail">
+                                            <img src="pic/IMG_1300.jpg" width="350" height ="250">
+                                        <div>
+                                    </th>
+
+                                    <th width="416" scope="col" >
+                                        <div class="thumbnail" id="index-thumbnail">
+                                            <img src="pic/IMG_1314.jpg" width="350" height ="250">
+                                        <div>
+                                    </th>
+                                </tr>
+
+                                <tr>
+                                    <th width="416" scope="col" >
+                                        <div class="thumbnail" id="index-thumbnail">
+                                            <img src="pic/IMG_1333.jpg" width="350" height ="250">
+                                        <div>
+                                    </th>
+
+                                    <th width="416" scope="col" >
+                                        <div class="thumbnail" id="index-thumbnail">
+                                            <img src="pic/IMG_1334.jpg" width="350" height ="250">
+                                        <div>
+                                    </th>
+
+                                    <th width="416" scope="col" >
+                                        <div class="thumbnail" id="index-thumbnail">
+                                            <img src="pic/IMG_1343.jpg" width="350" height ="250">
+                                        <div>
+                                    </th>
+                                </tr>
+
+                                <tr>
+                                    <th width="416" scope="col" >
+                                        <div class="thumbnail" id="index-thumbnail">
+                                            <img src="pic/IMG_1352.jpg" width="350" height ="250">
+                                        <div>
+                                    </th>
+
+                                    <th width="416" scope="col" >
+                                        <div class="thumbnail" id="index-thumbnail">
+                                            <img src="pic/IMG_1357.jpg" width="350" height ="250">
+                                        <div>
+                                    </th>
+
+                                    <th width="416" scope="col" >
+                                        <div class="thumbnail" id="index-thumbnail">
+                                            <img src="pic/IMG_1364.jpg" width="350" height ="250">
+                                        <div>
+                                    </th>
+                                </tr>
+
                             </tbody>
                         </table>
 
-
                     </div>
-
-                    
                 </div>
-
             </div>
         </div>
     </div>
-
-
-
+    
 </body>
 </html>
