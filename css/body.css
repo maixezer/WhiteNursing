@@ -91,3 +91,14 @@ strong {
 th {
 	width: 500px;
 }
+
+#leftcontent #container {
+	float: right;
+	padding-left: 40px;
+	margin-top: 20px;
+	margin-right: 30%;
+}
+
+#leftcontent #container p {
+	font-size: 18px;
+}
