@@ -6,7 +6,7 @@
 	width:1250px !important;
 }
 
-.wrapper-navbar .navbar .navbar-header {
+.navbar .navbar-header {
 	width:1250px !important;
 	height: 0px;
 }
@@ -101,4 +101,16 @@ th {
 
 #leftcontent #container p {
 	font-size: 18px;
+}
+
+#logo-text {
+	float: right;
+	height: auto;
+	margin-right: 49%;
+	margin-top: 8%;
+	color: #6698FF;
+	font-size: 25px;
+	text-align: center;
+	text-shadow:5px 5px 10px #666362;
+	
 }
