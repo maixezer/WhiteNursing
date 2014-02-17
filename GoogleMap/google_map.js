@@ -1,7 +1,7 @@
 function initialize() {
         var map_canvas = document.getElementById('map_canvas');
 
-        var myCenter = new google.maps.LatLng(13.851851,100.56756);
+        var myCenter = new google.maps.LatLng(13.816411,100.749795);
 
         var map_options = {
             center: myCenter,
@@ -17,7 +17,7 @@ function initialize() {
         marker.setMap(map);
 
         var infowindow = new google.maps.InfoWindow({
-            content:'Kasetsart University Bangkhen Campus'
+            content:'บริษัท ไว๊ท์ เนอร์สซิ่ง โฮม จำกัด'
         });
 
         // Zoom to 9 when clicking on marker
