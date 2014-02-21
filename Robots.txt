@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /GoogleMap
+Disallow: /bower-component
+Disallow: /css
+Disallow: /pic
+Disallow: /slimbox-2.05 
